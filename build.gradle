@@ -22,7 +22,7 @@ subprojects {
 
     repositories {
         maven { // The google mirror is less flaky than mavenCentral()
-            url "https://maven-central.storage-download.googleapis.com/maven2/" }
+            url "https://maven.aliyun.com/repository/public" }
         mavenCentral()
         mavenLocal()
     }
@@ -286,7 +286,7 @@ subprojects {
         }
     }
 
-    if (rootProject.properties.get('errorProne', true)) {
+    if (rootProject.properties.get('errorProne', false)) {
         dependencies {
             errorprone 'com.google.errorprone:error_prone_core:2.4.0'
             errorproneJavac 'com.google.errorprone:javac:9+181-r4173-1'
