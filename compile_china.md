@@ -6,6 +6,13 @@ compile grpc into `$HOME/.local`
 
 doc: `https://grpc.io/docs/languages/cpp/quickstart/`
 
+### edit gradle.properties
+
+```shell
+touch gradle.properties
+echo 'skipAndroid=true' >> gradle.properties
+```
+
 ### compile grpc-java
 
 ```shell
